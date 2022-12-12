@@ -1,0 +1,508 @@
+[
+  {
+    "ts": "2022-12-12T21:36:36.606Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "p39nycxzit31"
+            }
+          },
+          "id": "blogPost",
+          "type": "ContentType",
+          "createdAt": "2022-01-25T21:40:59.817Z",
+          "updatedAt": "2022-02-08T21:40:11.398Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "publishedAt": "2022-02-08T21:40:11.398Z",
+          "firstPublishedAt": "2022-01-25T21:41:00.157Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4SDtqAl8Y6iEC5454bbsbU"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4SDtqAl8Y6iEC5454bbsbU"
+            }
+          },
+          "publishedCounter": 6,
+          "version": 12,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4SDtqAl8Y6iEC5454bbsbU"
+            }
+          }
+        },
+        "displayField": "slug",
+        "name": "Blog Post",
+        "description": "",
+        "fields": [
+          {
+            "id": "slug",
+            "name": "slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              },
+              {
+                "regexp": {
+                  "pattern": "^[a-zA-Z0-9\\/_-]*$",
+                  "flags": null
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "type": "Date",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "image",
+            "name": "Image",
+            "type": "Link",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "body",
+            "name": "Body",
+            "type": "RichText",
+            "localized": false,
+            "required": false,
+            "validations": [
+              {
+                "enabledMarks": [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "code"
+                ],
+                "message": "Only bold, italic, underline, and code marks are allowed"
+              },
+              {
+                "enabledNodeTypes": [
+                  "heading-1",
+                  "heading-2",
+                  "heading-3",
+                  "heading-4",
+                  "heading-5",
+                  "heading-6",
+                  "ordered-list",
+                  "unordered-list",
+                  "hr",
+                  "blockquote",
+                  "embedded-entry-block",
+                  "embedded-asset-block",
+                  "hyperlink",
+                  "entry-hyperlink",
+                  "asset-hyperlink",
+                  "embedded-entry-inline"
+                ],
+                "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+              },
+              {
+                "nodes": {
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "excerpt",
+            "name": "Excerpt",
+            "type": "Text",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "Previously published fields are invalid",
+        "details": {
+        },
+        "request": {
+          "url": "/spaces/7cqvas6sx5u4/environments/master/content_types/blogPost",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/8.5.4; feature library-import; sdk contentful-management.js/10.19.1; platform node.js/v18.12.1; os macOS/v18.12.1;",
+            "CF-Sequence": "bb333ebb-8388-4dcb-8cd1-638ca2dd0264",
+            "Authorization": "Bearer ...Xn9fQ",
+            "user-agent": "node.js/v18.12.1",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 2,
+            "Content-Length": 1573
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"slug\",\"name\":\"Blog Post\",\"description\":\"\",\"fields\":[{\"id\":\"slug\",\"name\":\"slug\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[{\"unique\":true},{\"regexp\":{\"pattern\":\"^[a-zA-Z0-9\\\\/_-]*$\",\"flags\":null}}],\"disabled\":false,\"omitted\":false},{\"id\":\"title\",\"name\":\"Title\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"date\",\"name\":\"Date\",\"type\":\"Date\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"image\",\"name\":\"Image\",\"type\":\"Link\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"},{\"id\":\"body\",\"name\":\"Body\",\"type\":\"RichText\",\"localized\":false,\"required\":false,\"validations\":[{\"enabledMarks\":[\"bold\",\"italic\",\"underline\",\"code\"],\"message\":\"Only bold, italic, underline, and code marks are allowed\"},{\"enabledNodeTypes\":[\"heading-1\",\"heading-2\",\"heading-3\",\"heading-4\",\"heading-5\",\"heading-6\",\"ordered-list\",\"unordered-list\",\"hr\",\"blockquote\",\"embedded-entry-block\",\"embedded-asset-block\",\"hyperlink\",\"entry-hyperlink\",\"asset-hyperlink\",\"embedded-entry-inline\"],\"message\":\"Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed\"},{\"nodes\":{}}],\"disabled\":false,\"omitted\":false},{\"id\":\"excerpt\",\"name\":\"Excerpt\",\"type\":\"Text\",\"localized\":false,\"required\":false,\"validations\":[],\"disabled\":false,\"omitted\":false}]}"
+        },
+        "requestId": "841d3f3c-4580-41d5-a519-ae3c8ae020db"
+      }
+    }
+  },
+  {
+    "ts": "2022-12-12T21:37:56.595Z",
+    "level": "error",
+    "error": {
+      "name": "UnknownField",
+      "entity": {
+        "original": {
+          "metadata": {
+            "tags": [
+            ]
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "p39nycxzit31"
+              }
+            },
+            "id": "283eEzAwGfc2GgKFh4c5GX",
+            "type": "Entry",
+            "createdAt": "2022-01-25T21:41:08.356Z",
+            "updatedAt": "2022-02-08T21:40:59.886Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 23,
+            "publishedAt": "2022-02-08T21:40:59.886Z",
+            "firstPublishedAt": "2022-01-25T21:42:52.038Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "publishedCounter": 5,
+            "version": 24,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "slug": {
+              "en-US": "hello-world"
+            },
+            "title": {
+              "en-US": "Hello World"
+            },
+            "date": {
+              "en-US": "2022-01-25T00:00-05:00"
+            },
+            "image": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "U3SK6xjRhpQRa9vJy8nyM"
+                }
+              }
+            },
+            "body": {
+              "en-US": {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Hello! This is a demo blog post used for development only. This uses a Contentful Rich Text field for content.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "5ZkiE2jhld2iLz7VBmMEeX",
+                          "type": "Link",
+                          "linkType": "Asset"
+                        }
+                      }
+                    },
+                    "content": [
+                    ],
+                    "nodeType": "embedded-asset-block"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "document"
+              }
+            },
+            "excerpt": {
+              "en-US": "This is an excerpt for the blog post."
+            }
+          }
+        },
+        "transformed": {
+          "metadata": {
+            "tags": [
+            ]
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "p39nycxzit31"
+              }
+            },
+            "id": "283eEzAwGfc2GgKFh4c5GX",
+            "type": "Entry",
+            "createdAt": "2022-01-25T21:41:08.356Z",
+            "updatedAt": "2022-02-08T21:40:59.886Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "publishedVersion": 23,
+            "publishedAt": "2022-02-08T21:40:59.886Z",
+            "firstPublishedAt": "2022-01-25T21:42:52.038Z",
+            "createdBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "updatedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "publishedCounter": 5,
+            "version": 24,
+            "publishedBy": {
+              "sys": {
+                "type": "Link",
+                "linkType": "User",
+                "id": "4SDtqAl8Y6iEC5454bbsbU"
+              }
+            },
+            "contentType": {
+              "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "blogPost"
+              }
+            }
+          },
+          "fields": {
+            "slug": {
+              "en-US": "hello-world"
+            },
+            "title": {
+              "en-US": "Hello World"
+            },
+            "date": {
+              "en-US": "2022-01-25T00:00-05:00"
+            },
+            "image": {
+              "en-US": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "U3SK6xjRhpQRa9vJy8nyM"
+                }
+              }
+            },
+            "body": {
+              "en-US": {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Hello! This is a demo blog post used for development only. This uses a Contentful Rich Text field for content.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "5ZkiE2jhld2iLz7VBmMEeX",
+                          "type": "Link",
+                          "linkType": "Asset"
+                        }
+                      }
+                    },
+                    "content": [
+                    ],
+                    "nodeType": "embedded-asset-block"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "document"
+              }
+            },
+            "excerpt": {
+              "en-US": "This is an excerpt for the blog post."
+            }
+          }
+        }
+      },
+      "data": {
+        "status": 422,
+        "statusText": "Unprocessable Entity",
+        "message": "No field with id \"date\" found.",
+        "details": {
+          "errors": [
+            {
+              "name": "unknown",
+              "path": [
+                "fields",
+                "date"
+              ]
+            }
+          ]
+        },
+        "request": {
+          "url": "/spaces/7cqvas6sx5u4/environments/master/entries/283eEzAwGfc2GgKFh4c5GX",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/8.5.4; feature library-import; sdk contentful-management.js/10.19.1; platform node.js/v18.12.1; os macOS/v18.12.1;",
+            "CF-Sequence": "bb333ebb-8388-4dcb-8cd1-638ca2dd0264",
+            "Authorization": "Bearer ...Xn9fQ",
+            "user-agent": "node.js/v18.12.1",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Content-Type": "blogPost",
+            "Content-Length": 801
+          },
+          "method": "put",
+          "payloadData": "{\"metadata\":{\"tags\":[]},\"fields\":{\"slug\":{\"en-US\":\"hello-world\"},\"title\":{\"en-US\":\"Hello World\"},\"date\":{\"en-US\":\"2022-01-25T00:00-05:00\"},\"image\":{\"en-US\":{\"sys\":{\"type\":\"Link\",\"linkType\":\"Asset\",\"id\":\"U3SK6xjRhpQRa9vJy8nyM\"}}},\"body\":{\"en-US\":{\"data\":{},\"content\":[{\"data\":{},\"content\":[{\"data\":{},\"marks\":[],\"value\":\"Hello! This is a demo blog post used for development only. This uses a Contentful Rich Text field for content.\",\"nodeType\":\"text\"}],\"nodeType\":\"paragraph\"},{\"data\":{\"target\":{\"sys\":{\"id\":\"5ZkiE2jhld2iLz7VBmMEeX\",\"type\":\"Link\",\"linkType\":\"Asset\"}}},\"content\":[],\"nodeType\":\"embedded-asset-block\"},{\"data\":{},\"content\":[{\"data\":{},\"marks\":[],\"value\":\"\",\"nodeType\":\"text\"}],\"nodeType\":\"paragraph\"}],\"nodeType\":\"document\"}},\"excerpt\":{\"en-US\":\"This is an excerpt for the blog post.\"}}}"
+        },
+        "requestId": "9a9c3cd2-25b3-4b5e-9190-c32f3c8ec9a5"
+      }
+    }
+  }
+]
